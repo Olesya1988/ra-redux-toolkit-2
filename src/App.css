@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+header {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.title {
+  display: block;
+}
+
+.photos__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  object-fit: cover;
+}
+
+.photo:first-child {
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  border: 10px double gray;
+}
+
+input {
+  color: transparent;
+}
+
+input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input::before {
+  content: "Обзор...";
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+input:hover::before {
+  border-color: black;
+}
+
+input:active {
+  outline: 0;
+}
+
+input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
